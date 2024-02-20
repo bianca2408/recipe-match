@@ -1,17 +1,42 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from 'react-dom';
+// import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+
+import { BrowserRouter , Routes, Route, Link } from 'react-router-dom';
+import Home from './pages/home';
+import Login from './pages/Login';
+
+ReactDOM.render(
+  <BrowserRouter>
+    <Routes>
+      <Route index path='/' element={<Home />}></Route>
+      <Route index path='/login' element={<Login />}></Route>
+    </Routes>
+   </BrowserRouter>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+// const body = document.querySelector("body"),
+//       sidebar = body.querySelector(".sidebar"),
+//       toggle = body.querySelector(".toggle"),
+//       searchBtn = body.querySelector(".search-box"),
+//       modeSwitch = body.querySelector(".toggle-switch"),
+//       modeText = body.querySelector(".mode-text");
+
+//       toggle.addEventListener("click", ()=> {
+//         sidebar.classList.toggle("close");
+//       });
+//       searchBtn.addEventListener("click", ()=> {
+//         sidebar.classList.remove("close");
+//       });
+
+//       modeSwitch.addEventListener("click", ()=> {
+//         body.classList.toggle("dark");
+//         if(body.classList.contains("dark")){
+//           modeText.innerText = "Luminos"
+//         }else{
+//           modeText.innerText = "Intunecat"
+//         }
+//       });
