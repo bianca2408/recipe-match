@@ -7,11 +7,28 @@ import logo from '../assets/logo.png';
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase.js";
 
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
+
+const user = auth.currentUser;
 
 
 export default function Home(){
-    
+    const navigate = useNavigate();
+const handleLogOut = (e) =>{
+    e.preventDefault();
+    const auth = getAuth();
+    signOut(auth).then(() => {
+        console.log("te ai deconectat")
+        navigate('/login');
+      }).catch((error) => {
+        // An error happened.
+      })
+.catch((error) => {
+const errorCode = error.code;
+const errorMessage = error.message;
+});
+}
     useEffect(() => {
         const body = document.querySelector("body"),
           sidebar = body.querySelector(".sidebar"),
@@ -131,7 +148,7 @@ export default function Home(){
                     <li className="">
                             <a href="#">
                             <box-icon name='log-out' class="icon"></box-icon>
-                                <span  className="text nav-text">
+                                <span onClick={handleLogOut} className="text nav-text">
                                     Deconectare
                                 </span>
                             </a>
@@ -159,7 +176,7 @@ export default function Home(){
 
                 </div>
                 <div className="recipes">asdas</div>
-                <span>asda</span>
+                {/* <p>{user.email}</p> */}
             </div>
        </body> 
 	
