@@ -1,5 +1,6 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+<<<<<<< HEAD
 import { getFirestore } from "firebase/firestore";
 import {getAuth , createUserWithEmailAndPassword, onAuthStateChanged, signInWithPopup, GoogleAuthProvider} from "firebase/auth";
 import {getStorage, ref, uploadBytes} from 'firebase/storage';
@@ -7,6 +8,10 @@ import { getDatabase } from "firebase/database";
 import { useEffect, useState } from "react";
 
 
+=======
+
+import {getAuth} from "firebase/auth";
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -24,6 +29,7 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+<<<<<<< HEAD
 export const db = getDatabase(app);
 export const storage=getStorage(app);
 export const database =getFirestore(app);
@@ -49,4 +55,9 @@ export async function upload(file,user,setLoading){
   alert("uploaded file")
 }
 
+=======
+
+
+export const auth = getAuth(app);
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
 export default app

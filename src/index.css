@@ -8,9 +8,15 @@
 
 :root{
   /* Colors */
+<<<<<<< HEAD
   --body-color: #cd5c5c;
   --sidebar--color: #FDE8CD;
   --primary-color: #025955;
+=======
+  --body-color: #E4E9F7;
+  --sidebar--color: #FFF;
+  --primary-color: rgb(49, 141, 155);
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
   --primary-color-light: #F6F5FF;
   --toggle-color: #DDD;
   --text-color: #707070;
@@ -48,7 +54,11 @@ body.dark{
   background: var(--sidebar--color);
   transition: var(--tran-05);
   border-radius: 20px;
+<<<<<<< HEAD
   z-index: 10;
+=======
+  z-index: 100;
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
   
 }
 .sidebar.close{
@@ -251,6 +261,7 @@ body.dark .switch::before{
   height: 100vh;
   left: 300px;
   width: calc(100% - 300px);
+<<<<<<< HEAD
   border-radius: 20px;
   background: var(--primary-color);
   padding: 1rem;
@@ -260,6 +271,18 @@ body.dark .switch::before{
   flex-wrap: wrap;
 }
 
+=======
+  /* padding: 10px 14px; */
+  
+  border-radius: 20px;
+  
+  background: var(--primary-color);
+  
+  padding: 1rem;
+  transition: var(--tran-04);
+
+}
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
 .main--content .text{
   font-size: 30px;
   font-weight: 500;
@@ -274,6 +297,7 @@ body.dark .switch::before{
 }
 
 .header--wrapper{
+<<<<<<< HEAD
   position: relative;
   /* display: flex;
   justify-content: space-between;
@@ -454,3 +478,14 @@ body.dark .switch::before{
   opacity: 0.8;
 }
 
+=======
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background: #fff;
+}
+.main--content .recipes{
+  background: #DDD;
+}
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45

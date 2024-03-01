@@ -1,8 +1,13 @@
+<<<<<<< HEAD
 import React , {useEffect, useState} from "react";
+=======
+import React , {useEffect} from "react";
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
 import {Link, useNavigate} from "react-router-dom";
 import 'boxicons';
 import '../index.css';
 import '../index.js';
+<<<<<<< HEAD
 
 
 import logo from '../assets/logo.png';
@@ -48,6 +53,21 @@ export default function Home(){
     },[]); //run once when the component loads and never again
     const navigate = useNavigate();
     const handleLogOut = (e) =>{
+=======
+import logo from '../assets/logo.png';
+import { signOut } from "firebase/auth";
+import { auth } from "../firebase.js";
+
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+
+
+const user = auth.currentUser;
+
+
+export default function Home(){
+    const navigate = useNavigate();
+const handleLogOut = (e) =>{
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
     e.preventDefault();
     const auth = getAuth();
     signOut(auth).then(() => {
@@ -105,10 +125,16 @@ const errorMessage = error.message;
             }
           });
         };
+<<<<<<< HEAD
      
       }, []); // Empty dependency array ensures that the effect runs once after the initial render
       
       
+=======
+      }, []); // Empty dependency array ensures that the effect runs once after the initial render
+    
+    
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
     return(
         <div>
             
@@ -180,7 +206,11 @@ const errorMessage = error.message;
                     <div className="bottom-content">
                     <li className="">
                             <a href="#">
+<<<<<<< HEAD
                             <box-icon onClick={handleLogOut} name='log-out' class="icon"></box-icon>
+=======
+                            <box-icon name='log-out' class="icon"></box-icon>
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
                                 <span onClick={handleLogOut} className="text nav-text">
                                     Deconectare
                                 </span>
@@ -203,6 +233,7 @@ const errorMessage = error.message;
             </nav>
             <div  className="main--content">
                 <div className="header--wrapper">
+<<<<<<< HEAD
 
                 <div class="container">
          
@@ -242,6 +273,16 @@ const errorMessage = error.message;
                        </div>        
             </div>
             
+=======
+                    <div className="header--title">
+                        <span>asdad</span>
+                    </div>
+
+                </div>
+                <div className="recipes">asdas</div>
+                {/* <p>{user.email}</p> */}
+            </div>
+>>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
        </body> 
 	
        </div>
