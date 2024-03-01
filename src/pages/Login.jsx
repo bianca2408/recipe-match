@@ -1,42 +1,39 @@
 import React, {useState} from "react";
 import {auth} from '../firebase';
-<<<<<<< HEAD
+
 import '../Login.css';
 
-import { FaUser, FaLock } from "react-icons/fa";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
 
-import { createUserWithEmailAndPassword, getAuth, sendEmailVerification, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+
+import { sendEmailVerification,  updateProfile } from "firebase/auth";
 
 import { signInWithGooglePopup } from "../firebase";
 
-const Login = () => {
+
     
-  const user = auth.currentUser;
-=======
-import './Login.css';
+  
+
 import '../login.js';
 import { FaUser, FaLock } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-
+const user = auth.currentUser;
 
 const Login = () => {
     
     
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirmpassword, setConfirmPassword] = useState('');
     const [username, setUsername] = useState('');
-<<<<<<< HEAD
+
     const [loading, setLoading] = useState(false);
 
    
-=======
+
     const [isSigningIn, setisSigningIn] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
@@ -62,7 +59,7 @@ const Login = () => {
     //         })
     //     }
     // }
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+
     const navigate = useNavigate();
     const handleSubmit = (e) =>{
         e.preventDefault();
@@ -70,11 +67,11 @@ const Login = () => {
         signInWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
         // Signed in 
-<<<<<<< HEAD
+
         const user1 = userCredential.user;
-=======
+
         const user = userCredential.user;
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+
         console.log(user);
         navigate('/');
      })
@@ -87,7 +84,7 @@ const Login = () => {
         e.preventDefault();
         const auth = getAuth();
         createUserWithEmailAndPassword(auth, email, password)
-<<<<<<< HEAD
+
       .then((userCredential) => {
     // Signed up 
     //SE MODIFICA USERNAME UL
@@ -116,13 +113,17 @@ const Login = () => {
       const response = await signInWithGooglePopup();
       console.log(response);
   }
+   
+            
+             
+            
+    
+ 
     return(
         <div>
             <div class="area" >
-             
-            
         <div class="main">
-        {/* <div>curent user: {user?.email}</div> */}
+{/* <div>curent user: {user?.email}</div> */}
          <ul class="circles"> 
                   <li></li>
                     <li></li>
@@ -134,24 +135,7 @@ const Login = () => {
                     <li></li>
                     <li></li>
                     <li></li></ul>
-=======
-  .then((userCredential) => {
-    // Signed up 
-    const user = userCredential.user;
-    console.log("creat");
-    console.log(user);
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    // ..
-  });
-    }
-    return(
-        <div>
-            
-        <div class="main">
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+
             <input type="checkbox" id="chk" aria-hidden="true" />
         <div className="signup">
             <form   onSubmit={(e) => handleSubmitsignup(e)} action="">
@@ -161,10 +145,8 @@ const Login = () => {
                 <input type="password" value={password} name="pswd" placeholder="Parola" required="" onChange={(e) => setPassword(e.target.value)}/>
                 <input type="password" value={confirmpassword} name="pswd" placeholder="Confirmare Parola" required="" onChange={(e) => setConfirmPassword(e.target.value)}/>
                 <button>Inregistreaza-te</button>
-<<<<<<< HEAD
                 <button onClick={logGoogleUser}>Google</button>
-=======
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+
             </form>
 
         </div>
@@ -178,7 +160,7 @@ const Login = () => {
             </div>
  
         
-<<<<<<< HEAD
+
          
             
                
@@ -186,12 +168,12 @@ const Login = () => {
         
     </div>
    
-=======
+
         
         
     </div>
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
-    </div>
+
+    
     )
     
     

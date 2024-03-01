@@ -1,26 +1,13 @@
 {
-<<<<<<< HEAD
-  "name": "recipe-match",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@react-spring/web": "^9.5.5",
-    "@testing-library/jest-dom": "^5.17.0",
-    "@testing-library/react": "^13.4.0",
-    "@testing-library/user-event": "^13.5.0",
-    "boxicons": "^2.1.4",
-    "firebase": "^10.8.0",
-    "npm-git-install": "^0.3.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "react-router-dom": "^6.22.1",
-    "react-scripts": "5.0.1",
-    "react-tinder-card": "^1.6.4",
-=======
   "name": "recipe_match",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emotion/react": "^11.11.3",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.11",
+    "@mui/material": "^5.15.11",
+    "@react-spring/web": "^9.5.5",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
@@ -30,7 +17,7 @@
     "react-responsive": "^9.0.2",
     "react-router-dom": "^6.22.0",
     "react-scripts": "^5.0.1",
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+    "react-tinder-card": "^1.6.4",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -56,11 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
-=======
->>>>>>> 59fd59f07448b3671c73e07a251737f3ba0c4f45
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
