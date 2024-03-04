@@ -14,7 +14,7 @@ import { signInWithGooglePopup } from "../firebase";
   
 
 import '../login.js';
-import { FaUser, FaLock } from "react-icons/fa";
+// import { FaUser, FaLock } from "react-icons/fa";
 import { Link, Navigate, useNavigate } from 'react-router-dom';
 import logo from '../assets/logo.png';
 import { createUserWithEmailAndPassword, getAuth, signInWithEmailAndPassword } from "firebase/auth";
