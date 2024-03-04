@@ -33,7 +33,7 @@ body {
     radial-gradient(var(--_r) left  var(--_g0)) calc(var(--_s)/ 2) var(--s),
     linear-gradient(90deg,#433520 50%,#00917C 0);
   background-size: var(--_s) calc(4*var(--s));
-
+  /* backdrop-filter: blur(5px); */
 
 }
 
@@ -42,7 +42,7 @@ body {
 	height: 500px;
 	
 	overflow: hidden;
-	/* background: url("../assets/login.jpg") no-repeat center / cover; */
+	
 	background: #025955;
 	border-radius: 10px;
 	box-shadow: 5px 20px 50px #000;

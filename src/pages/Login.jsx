@@ -120,7 +120,7 @@ const Login = () => {
     
  
     return(
-        <div>
+        <div className="login_background">
             <div class="area" >
         <div class="main">
 {/* <div>curent user: {user?.email}</div> */}
